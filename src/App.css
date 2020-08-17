@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #8e44ad;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-white: #fff;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /*** 
+    Font Size Should be default 10px 
+    But px is a bad coading practice
+    so it should be convert percentage
+    Here 16px is default browser font-size 
+      & 10px is root font-size 
+    Like- (10px / 16px) =  0.625px * 100 % = 62.5% 
+    It should be 62.5%
+    1rem = 10px;
+    1em  = 16px;
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+.font-bold {
+  font-weight: 500 !important;
+  color: var(--color-grey-dark-2);
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Modal Start */
+.purchases-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.purchases-section h3 {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.purchase-btn {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+.empty-data {
+  height: 80px;
+  width: 80px;
+}
+
+.empty-row {
+  text-align: center;
+}
+
+.empty-row p {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+/* Modal End */
+
+.order-section {
+  padding: 1.5rem;
+}
+
+.order-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  border-bottom: 0.5px solid var(--color-primary);
+}
+.order-section-header-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.purchase-title {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.payment-title {
+  color: var(--color-grey-light-4);
+}
+
+.horizontal-line {
+  border: 0.2px solid var(--color-grey-light-4);
+  transform: rotate(90deg);
+  margin: 0 3rem;
+}
+.icon-section {
+  font-size: 2.5rem;
+  color: var(--color-grey-light-4);
+}
+
+.section-left {
+  padding: 1rem 1rem;
+}
+.purchase-order {
+}
+.purchase-order .title {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+}
+.purchase-order .sub-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-grey-dark-2);
+}
+.purchase-order .star-entity {
+  color: red;
+}
+.purchase-order .icon-plus {
+  border-radius: 100%;
+  color: var(--color-white);
+  background-color: orange;
+
+  padding: 0 0.5rem;
+}
+.purchase-order .icon-ok {
+  border-radius: 100%;
+  color: var(--color-white);
+  background-color: aquamarine;
+
+  padding: 0 0.4rem;
+}
+.purchase-order .icon-plus .fa,
+.purchase-order .icon-ok .fa {
+  font-size: 1rem !important;
+}
+.purchase-order .icon-plus .fa-sort-down {
+  position: relative;
+  top: -2px;
+}
+.purchase-order .order-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-white);
+  background-color: var(--color-grey-dark-2);
+  border-radius: 0.5rem;
+}
+
+.order-id {
+  padding: 0.5rem 0.5rem;
+  border: 0.5px solid var(--color-primary);
+}
+
+.purchase-order-id .title {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+}
+.purchase-order-id .sub-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-grey-dark-2);
+}
+.purchase-order-id .star-entity {
+  color: red;
+}
+.purchase-order-id .icon-plus {
+  border-radius: 100%;
+  color: var(--color-white);
+  background-color: orange;
+
+  padding: 0 0.6rem;
+}
+.purchase-order-id .icon-ok {
+  border-radius: 100%;
+  color: var(--color-white);
+  background-color: aquamarine;
+
+  padding: 0 0.4rem;
+}
+.purchase-order-id .icon-plus .fa,
+.purchase-order-id .icon-ok .fa {
+  font-size: 1rem !important;
+}
+.purchase-order-id .icon-plus .fa-sort-down {
+  position: relative;
+  top: -2px;
+}
+
+.order-table {
+  border: 0.5px solid var(--color-primary);
+  position: relative;
+}
+.order-table thead {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1rem;
+}
+.table thead th {
+  border-bottom: none !important;
+}
+.order-table td {
+  vertical-align: middle !important;
+  border-top: none !important;
+}
+.order-table .image-table {
+  height: 30px;
+  width: 30px;
+}
+.order-table .icon-ok {
+  border-radius: 100%;
+  color: var(--color-white);
+  background-color: aquamarine;
+
+  padding: 0 0.4rem;
+}
+.order-table .icon-ok .fa {
+  font-size: 1rem !important;
+}
+.order-table .circle-cross {
+  font-size: 1.8rem;
+  color: var(--color-grey-dark-3);
+}
+.order-table .add-row {
+  font-size: 1.4rem;
+  color: var(--color-grey-dark-2);
+  font-weight: 500;
+}
+
+.order-id-summary {
+  border: 0.5px solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+.order-id-summary .title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-grey-dark-2);
+}
+.order-id-summary .sub-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-grey-dark-3);
+}
+.button-section .btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  border-radius: 2rem !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Section left css here */
+.section-right {
+  padding: 1rem 3rem;
+}
+
+.section-right-header {
+  font-size: 1.2rem;
+}
+
+.logo-section {
+  align-items: center;
+}
+
+.logo-icon {
+  height: 4rem;
+  width: 10rem;
+}
+
+.menu-bar {
+  font-size: 1.2rem;
+}
+
+.vertical-line {
+  border: 1px solid var(--color-grey-dark-3);
+}
+
+.red {
+  color: red;
+}
+
+.free-shipping-title p {
+  background-color: #000;
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 0.4rem 0.6rem;
+}
+
+.offer-pic {
+  height: 15rem;
+  width: 30rem;
+  transform: rotate(-10deg);
+}
+
+.offer h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem !important;
+  margin-top: 2.5rem;
+}
+
+.offer h3 {
+  font-weight: 500;
+  font-size: 1.6rem !important;
+  margin-top: 1.5rem;
+  color: var(--color-grey-dark-3);
+}
+
+.section-lef-border {
+  border-right: 2px solid var(--color-primary);
+  border-radius: 2px;
+  padding-right: 30px;
+}
+
+/* Responsive Css */
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-lef-border {
+    border-right: none;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+
+  .section-lef-border {
+    border-right: none;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+
+  .section-lef-border {
+    border-right: none;
+  }
+}
