@@ -37,6 +37,7 @@ const App = () => {
     if (
       productsData.productName === "" &&
       productsData.quantity === "" &&
+      productsData.price !== NaN &&
       productsData.lineTotal === "" &&
       productsData.cashBack === ""
     ) {
